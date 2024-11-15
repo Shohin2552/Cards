@@ -11,9 +11,8 @@ func (repo *Repository) UpdateUser(user models.User) (err error) {
 		SET
 			name = $2,
 			number = $3,
-			create_date = $4,
 		WHERE id = $1
-	`, user.Id, user.Name, user.Number, user.Create_Date)
+	`, user.Id, user.Name, user.Number)
 
 	return
 }
